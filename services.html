@@ -2,32 +2,52 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Our Services | FitnessFirst.lk</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services | FitnessFirst.lk</title>
   
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="services.css">
 </head>
 <body>
-  <nav class="navbar">
+  
+  <nav class="navbar" id="navbar">
     <div class="logo">FitnessFirst<span class="dot-lk">.lk</span></div>
-    <ul class="nav-links">
+    
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    
+    <ul class="nav-links" id="nav-links">
       <li><a href="fitness first.html">Home</a></li>
-      <li><a href="services.html">Classes</a></li>
+      <li><a href="services.html" class="active">Classes</a></li>
       <li><a href="trainers.html">Trainers</a></li>
       <li><a href="pricing.html">Pricing</a></li>
       <li><a href="mealplans.html">Meal Plans</a></li>
-      <li><a href ="register.html">Register</a></li>
+      <li><a href="register.html" class="nav-btn">Register</a></li>
     </ul>
   </nav>
 
-  <main>
-    <section class="services-section">
-      <h2 class="experts-heading">Our Services</h2>
-      <div class="services-grid">
-    
-        <div class="service-card">
-          <img src="https://www.massgainssource.com/wp-content/uploads/2023/05/Muscle-Growth-and-Strength-Gains.jpg" alt="Yoga Class" class="class-img" />
+  <header class="page-hero">
+    <div class="hero-content fade-in-up">
+      <h1>Train With Purpose</h1>
+      <p>Explore our diverse range of classes and programs designed to help you build strength, improve mobility, and unlock your true potential.</p>
+    </div>
+  </header>
+
+  <main class="services-container">
+    <section class="services-grid">
+      <!-- Muscle Building -->
+      <div class="service-card reveal">
+        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop');">
+          <span class="feature-label">Strength</span>
+        </div>
+        <div class="card-content">
           <h3>Muscle Building</h3>
           <ul class="service-list">
             <li>Increase Strength</li>
@@ -35,21 +55,33 @@
             <li>Custom Plans</li>
             <li>Track Progress</li>
           </ul>
+          <a href="register.html" class="btn btn-primary btn-full">Join a Program</a>
         </div>
-     
-        <div class="service-card">
-          <img src="https://images.pexels.com/photos/3823039/pexels-photo-3823039.jpeg" alt="Yoga Class" class="class-img" />
+      </div>
+      
+      <!-- Yoga -->
+      <div class="service-card reveal">
+        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?q=80&w=2070&auto=format&fit=crop');">
+          <span class="feature-label">Mobility</span>
+        </div>
+        <div class="card-content">
           <h3>Yoga</h3>
           <ul class="service-list">
-            <li>Enhance flexibility and </li>
-            <li>Improve mental health</li>
+            <li>Enhance Flexibility</li>
+            <li>Improve Mental Health</li>
             <li>Stress Reliever</li>
-            <li>Boost Metabolism</li>
+            <li>Core Stability</li>
           </ul>
+          <a href="register.html" class="btn btn-primary btn-full">Join a Program</a>
         </div>
-        
-        <div class="service-card">
-          <img src="https://images.pexels.com/photos/4325466/pexels-photo-4325466.jpeg" alt="Zumba Class" class="class-img" />
+      </div>
+
+      <!-- Zumba -->
+      <div class="service-card reveal">
+        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=2070&auto=format&fit=crop');">
+          <span class="feature-label">Cardio</span>
+        </div>
+        <div class="card-content">
           <h3>Zumba</h3>
           <ul class="service-list">
             <li>High-Energy Cardio</li>
@@ -57,10 +89,16 @@
             <li>Stress Reliever</li>
             <li>Tones Your Body</li>
           </ul>
+          <a href="register.html" class="btn btn-primary btn-full">Join a Program</a>
         </div>
-     
-        <div class="service-card">
-          <img src="https://images.pexels.com/photos/6550872/pexels-photo-6550872.jpeg" alt="HIIT" class="class-img" />
+      </div>
+
+      <!-- HIIT -->
+      <div class="service-card reveal">
+        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=2069&auto=format&fit=crop');">
+          <span class="feature-label">Endurance</span>
+        </div>
+        <div class="card-content">
           <h3>HIIT</h3>
           <ul class="service-list">
             <li>Burn More in Less Time</li>
@@ -68,10 +106,16 @@
             <li>Builds Strength & Speed</li>
             <li>Adaptable for All Levels</li>
           </ul>
+          <a href="register.html" class="btn btn-primary btn-full">Join a Program</a>
         </div>
+      </div>
 
-        <div class="service-card">
-          <img src="https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg" alt="Strength Training" class="class-img" />
+      <!-- CrossFit -->
+      <div class="service-card reveal">
+        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1601422407692-ec4eeec1d9b3?q=80&w=1925&auto=format&fit=crop');">
+          <span class="feature-label">Strength & Cardio</span>
+        </div>
+        <div class="card-content">
           <h3>CrossFit</h3>
           <ul class="service-list">
             <li>Functional Fitness</li>
@@ -79,18 +123,31 @@
             <li>Scalable for All Levels</li>
             <li>Faster Results</li>
           </ul>
+          <a href="register.html" class="btn btn-primary btn-full">Join a Program</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <p>&copy; 2025 Fitness First. All rights reserved.</p>
-    <div class="social-links">
-      <a href="#">Instagram</a>
-      <a href="#">Facebook</a>
-      <a href="#">Twitter</a>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h2>FitnessFirst<span class="dot-lk">.lk</span></h2>
+        <p>Galle road, Moratuwa.</p>
+        <p>+94 456 7890 | support@fitnessfirst.com</p>
+      </div>
+      <div class="social-links">
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Fitness First. All rights reserved.</p>
     </div>
   </footer>
+
+  <a href="#" class="back-to-top" id="backToTop">↑</a>
+  <script src="site.js"></script>
 </body>
 </html>

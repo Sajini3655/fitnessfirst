@@ -1,98 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Meal Plans - Fitness First</title>
-  <link rel="stylesheet" href="mealplans.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meal Plans | FitnessFirst.lk</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="mealplans.css">
 </head>
 <body>
-
-  <nav class="navbar">
+  <nav class="navbar" id="navbar">
     <div class="logo">FitnessFirst<span class="dot-lk">.lk</span></div>
-    <ul class="nav-links">
+    
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    
+    <ul class="nav-links" id="nav-links">
       <li><a href="fitness first.html">Home</a></li>
       <li><a href="services.html">Classes</a></li>
       <li><a href="trainers.html">Trainers</a></li>
       <li><a href="pricing.html">Pricing</a></li>
-      <li><a href="mealplans.html">Meal Plans</a></li>
-      <li><a href="register.html">Register</a></li>
+      <li><a href="mealplans.html" class="active">Meal Plans</a></li>
+      <li><a href="register.html" class="nav-btn">Register</a></li>
     </ul>
   </nav>
 
+  <header class="page-hero">
+    <div class="hero-content fade-in-up">
+      <h1>Fuel Your Progress</h1>
+      <p>Transform your body from the inside out. Choose a nutrition plan that fits your goals and lifestyle.</p>
+    </div>
+  </header>
 
-  <section class="meal-section">
-    <h2>Our Meal Plans</h2>
-    <p>Fuel your body with balanced nutrition. Choose a plan that fits your goals and lifestyle.</p>
-
-    <div class="meal-grid">
-      <div class="meal-card">
-        <img src="https://th.bing.com/th/id/OIP.P9w42V1Pg5RNpP8e8ryboAHaFb?r=0&rs=1&pid=ImgDetMain" alt="Weight Loss Meal">
-        <h3>Weight Loss</h3>
-        <p>Low-calorie, high-nutrient meals with plenty of greens, lean proteins, and smart carbs.</p>
+  <main class="meal-container">
+    <section class="meal-grid">
+      <!-- Weight Loss -->
+      <div class="meal-card reveal">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=2070&auto=format&fit=crop" alt="Weight Loss Meal">
+          <div class="img-overlay"></div>
+        </div>
+        <div class="card-content">
+          <h3>Weight Loss</h3>
+          <p>Low-calorie, high-nutrient meals with plenty of greens, lean proteins, and smart carbs.</p>
+        </div>
       </div>
 
-      <div class="meal-card">
-        <img src="https://ic-cdn.flipboard.com/eatingwell.com/89a40f38c5c57641196875c9e9a00d2a5c71ba4c/_xlarge.jpeg" alt="Muscle Gain Meal">
-        <h3>Muscle Gain</h3>
-        <p>Protein-rich meals with healthy fats and carbs to support muscle building and recovery.</p>
+      <!-- Muscle Gain -->
+      <div class="meal-card reveal">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1543362906-acfc16c67564?q=80&w=1965&auto=format&fit=crop" alt="Muscle Gain Meal">
+          <div class="img-overlay"></div>
+        </div>
+        <div class="card-content">
+          <h3>Muscle Gain</h3>
+          <p>Protein-rich meals with healthy fats and carbs to support muscle building and recovery.</p>
+        </div>
       </div>
 
-      <div class="meal-card">
-        <img src="https://th.bing.com/th?id=OIF.HpYM%2bWR14%2f2f2Worirlf8A&r=0&rs=1&pid=ImgDetMain" alt="Balanced Meal">
-        <h3>Balanced</h3>
-        <p>Perfect for maintenance—moderate portions, clean eating, and a focus on whole foods.</p>
+      <!-- Balanced -->
+      <div class="meal-card reveal">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=2053&auto=format&fit=crop" alt="Balanced Meal">
+          <div class="img-overlay"></div>
+        </div>
+        <div class="card-content">
+          <h3>Balanced</h3>
+          <p>Perfect for maintenance—moderate portions, clean eating, and a focus on whole foods.</p>
+        </div>
       </div>
 
-      <div class="meal-card">
-        <img src="https://th.bing.com/th/id/R.b6b82f73cc7d8403b7552b3bcf943d5f?rik=1grP7FEQsJSV8g&pid=ImgRaw&r=0" alt="Vegan Meal">
-        <h3>Vegan</h3>
-        <p>Plant-based options with high protein sources like legumes, tofu, quinoa, and seeds.</p>
+      <!-- Vegan -->
+      <div class="meal-card reveal">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1511690743698-d9d85f2fbf38?q=80&w=1887&auto=format&fit=crop" alt="Vegan Meal">
+          <div class="img-overlay"></div>
+        </div>
+        <div class="card-content">
+          <h3>Vegan</h3>
+          <p>Plant-based options with high protein sources like legumes, tofu, quinoa, and seeds.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bmi-section reveal">
+      <div class="bmi-box">
+        <h2>Calculate Your BMI</h2>
+        <p>Find out where you stand and choose the right meal plan for your body type.</p>
+        
+        <form class="bmi-form" id="bmi-form" onsubmit="calculateBMI(event)">
+          <div class="input-group">
+            <input type="number" id="weight" placeholder="Weight (kg)" required step="0.1" min="1" max="300" />
+            <input type="number" id="height" placeholder="Height (cm)" required step="0.1" min="50" max="300" />
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Calculate</button>
+        </form>
+        
+        <div class="bmi-result-box" id="bmi-result-box" style="display: none;">
+          <h3 id="bmi-value">--</h3>
+          <div id="bmi-category" class="bmi-badge">--</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h2>FitnessFirst<span class="dot-lk">.lk</span></h2>
+        <p>Galle road, Moratuwa.</p>
+        <p>+94 456 7890 | support@fitnessfirst.com</p>
+      </div>
+      <div class="social-links">
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
       </div>
     </div>
-  </section>
-
- 
-  <section class="bmi-section">
-    <h2>Calculate Your BMI</h2>
-    <form class="bmi-form" onsubmit="calculateBMI(event)">
-      <input type="number" id="weight" placeholder="Weight (kg)" required />
-      <input type="number" id="height" placeholder="Height (cm)" required />
-      <br>
-      <button type="submit">Calculate</button>
-    </form>
-    <div class="bmi-result" id="bmi-result"></div>
-  </section>
-
- 
-  <footer class="footer">
-    <p>&copy; 2025 Fitness First. All rights reserved.</p>
-    <div class="social-links">
-      <a href="#">Instagram</a>
-      <a href="#">Facebook</a>
-      <a href="#">Twitter</a>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Fitness First. All rights reserved.</p>
     </div>
   </footer>
 
-
+  <a href="#" class="back-to-top" id="backToTop">↑</a>
+  
+  <script src="site.js"></script>
   <script>
     function calculateBMI(event) {
       event.preventDefault();
-      const weight = parseFloat(document.getElementById("weight").value);
-      const heightCm = parseFloat(document.getElementById("height").value);
+      
+      const weightInput = document.getElementById("weight");
+      const heightInput = document.getElementById("height");
+      const weight = parseFloat(weightInput.value);
+      const heightCm = parseFloat(heightInput.value);
+      
+      if (isNaN(weight) || isNaN(heightCm) || weight <= 0 || heightCm <= 0) {
+        alert("Please enter valid, positive numbers for weight and height.");
+        return;
+      }
+
       const heightM = heightCm / 100;
       const bmi = weight / (heightM * heightM);
       let category = "";
+      let colorClass = "";
 
-      if (bmi < 18.5) category = "Underweight";
-      else if (bmi < 24.9) category = "Normal weight";
-      else if (bmi < 29.9) category = "Overweight";
-      else category = "Obese";
+      if (bmi < 18.5) {
+        category = "Underweight";
+        colorClass = "badge-blue";
+      } else if (bmi >= 18.5 && bmi < 24.9) {
+        category = "Normal Weight";
+        colorClass = "badge-green";
+      } else if (bmi >= 25 && bmi < 29.9) {
+        category = "Overweight";
+        colorClass = "badge-yellow";
+      } else {
+        category = "Obese";
+        colorClass = "badge-red";
+      }
 
-      document.getElementById("bmi-result").textContent =
-        `Your BMI is ${bmi.toFixed(2)} (${category})`;
+      const resultBox = document.getElementById("bmi-result-box");
+      const bmiValue = document.getElementById("bmi-value");
+      const bmiBadge = document.getElementById("bmi-category");
+
+      resultBox.style.display = "block";
+      bmiValue.textContent = `BMI: ${bmi.toFixed(2)}`;
+      bmiBadge.textContent = category;
+      bmiBadge.className = `bmi-badge ${colorClass}`;
     }
   </script>
-
 </body>
 </html>
