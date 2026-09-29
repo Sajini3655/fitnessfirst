@@ -2,104 +2,184 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Membership Plans | FitnessFirst.lk</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Membership Plans | FitnessFirst.lk</title>
   
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="pricing.css">
 </head>
 <body>
-  <nav class="navbar">
+  <nav class="navbar" id="navbar">
     <div class="logo">FitnessFirst<span class="dot-lk">.lk</span></div>
-    <ul class="nav-links">
+    
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    
+    <ul class="nav-links" id="nav-links">
       <li><a href="fitness first.html">Home</a></li>
       <li><a href="services.html">Classes</a></li>
       <li><a href="trainers.html">Trainers</a></li>
-      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="pricing.html" class="active">Pricing</a></li>
       <li><a href="mealplans.html">Meal Plans</a></li>
-      <li><a href ="register.html">Register</a></li>
+      <li><a href="register.html" class="nav-btn">Register</a></li>
     </ul>
   </nav>
 
-  <main>
-    <section class="pricing-section">
-      <h2 class="experts-heading">Membership Plans</h2>
-      <div class="pricing-grid">
-        
-        <div class="pricing-card">
-          <div class="plan-label silver">Silver</div>
-          <div class="price">2,000 <span class="currency">LKR</span><span class="per">/month</span></div>
-          <ul class="pricing-features">
-            <li>Access to gym equipment</li>
-            <li>Locker room facilities</li>
-            <li>Ideal for beginners</li>
-            <li>Affordable monthly plan</li>
-          </ul>
-          <a href="#" class="btn-pricing">Join Now</a>
+  <header class="page-hero">
+    <div class="hero-content fade-in-up">
+      <h1>Choose Your Membership</h1>
+      <p>Flexible plans tailored to your goals. No hidden fees. Just results.</p>
+    </div>
+  </header>
+
+  <main class="pricing-container">
+    <section class="pricing-grid">
+      <!-- Silver -->
+      <div class="pricing-card silver-card reveal">
+        <div class="plan-header">
+          <h3 class="silver">Silver</h3>
+          <div class="price">2,000<span class="currency">LKR</span><span class="per">/mo</span></div>
         </div>
-       
-        <div class="pricing-card featured">
-          <div class="plan-label gold">Gold</div>
-          <div class="price">3,500 <span class="currency">LKR</span><span class="per">/month</span></div>
-          <ul class="pricing-features">
-            <li>All Silver features</li>
-            <li>Access to group classes</li>
-            <li>One personal training session/month</li>
-            <li>Monthly progress tracking</li>
-          </ul>
-          <a href="#" class="btn-pricing">Join Now</a>
-        </div>
-        
-        <div class="pricing-card">
-          <div class="plan-label platinum">Platinum</div>
-          <div class="price">5,000 <span class="currency">LKR</span><span class="per">/month</span></div>
-          <ul class="pricing-features">
-            <li>All Gold features</li>
-            <li>Unlimited personal training</li>
-            <li>Personalized fitness and diet plans</li>
-            <li>Priority access to equipment & events</li>
-          </ul>
-          <a href="#" class="btn-pricing">Join Now</a>
-        </div>
+        <ul class="pricing-features">
+          <li>Access to gym equipment</li>
+          <li>Locker room facilities</li>
+          <li>Ideal for beginners</li>
+          <li>Affordable monthly plan</li>
+        </ul>
+        <a href="register.html" class="btn btn-outline btn-full">Join Now</a>
       </div>
-      <div class="student-offer">
-        <strong>Student Offer:</strong> Get <span>15% off</span> with your student ID!
+
+      <!-- Gold -->
+      <div class="pricing-card gold-card featured reveal">
+        <div class="popular-badge">Most Popular</div>
+        <div class="plan-header">
+          <h3 class="gold">Gold</h3>
+          <div class="price">3,500<span class="currency">LKR</span><span class="per">/mo</span></div>
+        </div>
+        <ul class="pricing-features">
+          <li>All Silver features</li>
+          <li>Access to group classes</li>
+          <li>One personal training session/month</li>
+          <li>Monthly progress tracking</li>
+        </ul>
+        <a href="register.html" class="btn btn-primary btn-full">Join Now</a>
       </div>
-      <div class="cta-note">
-        Join today or try our <strong>7-day free trial</strong> — no commitment, just results!
+
+      <!-- Platinum -->
+      <div class="pricing-card platinum-card reveal">
+        <div class="plan-header">
+          <h3 class="platinum">Platinum</h3>
+          <div class="price">5,000<span class="currency">LKR</span><span class="per">/mo</span></div>
+        </div>
+        <ul class="pricing-features">
+          <li>All Gold features</li>
+          <li>Unlimited personal training</li>
+          <li>Personalized fitness and diet plans</li>
+          <li>Priority access to equipment & events</li>
+        </ul>
+        <a href="register.html" class="btn btn-outline btn-full">Join Now</a>
       </div>
     </section>
 
-    <section class="faq-section">
-      <h2 class="faq-heading">Frequently Asked Questions</h2>
+    <!-- Student Offer & Free Trial -->
+    <section class="special-offers reveal">
+      <div class="offer-box">
+        <h3><svg class="offer-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg> Student Offer</h3>
+        <p>Get <strong>15% off</strong> any plan with a valid student ID.</p>
+        <a href="register.html" class="btn btn-sm btn-outline">Claim Offer</a>
+      </div>
+      <div class="offer-box highlight">
+        <h3><svg class="offer-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="m9 16 2 2 4-4"></path></svg> 7-Day Free Trial</h3>
+        <p>Try before you buy. No commitment, just results.</p>
+        <a href="register.html" class="btn btn-sm btn-primary">Start Trial</a>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section reveal">
+      <div class="section-header">
+        <h2>Frequently Asked Questions</h2>
+        <div class="title-line"></div>
+      </div>
       <div class="faq-list">
         <div class="faq-item">
-          <h4>Can I upgrade my plan later?</h4>
-          <p>Yes, you can upgrade at any time from your account dashboard or by contacting our front desk.</p>
+          <button class="faq-toggle">Can I upgrade my plan later? <span class="icon">+</span></button>
+          <div class="faq-content">
+            <p>Yes, you can upgrade at any time from your account dashboard or by contacting our front desk.</p>
+          </div>
         </div>
         <div class="faq-item">
-          <h4>Is there a cancellation fee?</h4>
-          <p>No, we offer hassle-free cancellations. You can cancel anytime without extra charges.</p>
+          <button class="faq-toggle">Is there a cancellation fee? <span class="icon">+</span></button>
+          <div class="faq-content">
+            <p>No, we offer hassle-free cancellations. You can cancel anytime without extra charges.</p>
+          </div>
         </div>
         <div class="faq-item">
-          <h4>Do I need to book in advance for classes?</h4>
-          <p>Yes, for group classes and personal training, booking in advance is recommended to reserve your spot.</p>
+          <button class="faq-toggle">Do I need to book in advance for classes? <span class="icon">+</span></button>
+          <div class="faq-content">
+            <p>Yes, for group classes and personal training, booking in advance is recommended to reserve your spot.</p>
+          </div>
         </div>
         <div class="faq-item">
-          <h4>Can I try before I buy?</h4>
-          <p>We offer a 7-day free trial so you can explore the gym before committing to a membership.</p>
+          <button class="faq-toggle">Can I try before I buy? <span class="icon">+</span></button>
+          <div class="faq-content">
+            <p>We offer a 7-day free trial so you can explore the gym before committing to a membership.</p>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <p>&copy; 2025 Fitness First. All rights reserved.</p>
-    <div class="social-links">
-      <a href="#">Instagram</a>
-      <a href="#">Facebook</a>
-      <a href="#">Twitter</a>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h2>FitnessFirst<span class="dot-lk">.lk</span></h2>
+        <p>Galle road, Moratuwa.</p>
+        <p>+94 456 7890 | support@fitnessfirst.com</p>
+      </div>
+      <div class="social-links">
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Fitness First. All rights reserved.</p>
     </div>
   </footer>
+
+  <a href="#" class="back-to-top" id="backToTop">↑</a>
+  <script src="site.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // FAQ Accordion logic
+      const toggles = document.querySelectorAll(".faq-toggle");
+      toggles.forEach(toggle => {
+        toggle.addEventListener("click", function() {
+          const content = this.nextElementSibling;
+          const icon = this.querySelector(".icon");
+          
+          if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+            icon.textContent = "+";
+          } else {
+            // Close all others
+            document.querySelectorAll(".faq-content").forEach(c => c.style.maxHeight = null);
+            document.querySelectorAll(".icon").forEach(i => i.textContent = "+");
+            
+            content.style.maxHeight = content.scrollHeight + "px";
+            icon.textContent = "−";
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>

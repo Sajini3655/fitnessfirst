@@ -4,77 +4,181 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fitness First - Home</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   
-
-  <nav class="navbar">
-    <div class="logo">FitnessFirst.lk</div>
-    <ul class="nav-links">
-      <li><a href="fitness first.html">Home</a></li>
+  <nav class="navbar transparent" id="navbar">
+    <div class="logo">FitnessFirst<span class="dot-lk">.lk</span></div>
+    
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    
+    <ul class="nav-links" id="nav-links">
+      <li><a href="fitness first.html" class="active">Home</a></li>
       <li><a href="services.html">Classes</a></li>
       <li><a href="trainers.html">Trainers</a></li>
       <li><a href="pricing.html">Pricing</a></li>
       <li><a href="mealplans.html">Meal Plans</a></li>
-      <li><a href ="register.html">Register</a></li>
-      
+      <li><a href="register.html" class="nav-btn">Register</a></li>
     </ul>
   </nav>
 
-  
-  <header class="hero">
-    <div class="hero-text">
-      <h1>Welcome to Fitness First</h1>
-      <p>Your fitness journey starts here.</p>
-      <a href="login.html" class="btn">Login</a>
+  <header class="hero-section" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="eyebrow fade-in-up">YOUR STRONGEST SELF STARTS HERE</span>
+      <h1 class="fade-in-up delay-1">
+        Train Hard.<br>
+        Live <span class="animated-text">STRONGER</span>.
+      </h1>
+      <p class="fade-in-up delay-2">
+        Build strength, confidence, and consistency with training, nutrition, and expert guidance designed around your goals.
+      </p>
+      <div class="hero-buttons fade-in-up delay-3">
+        <a href="register.html" class="btn btn-primary">Start Your Journey</a>
+        <a href="services.html" class="btn btn-secondary">Explore Programs</a>
+      </div>
+    </div>
+    
+    <div class="floating-badges">
+      <div class="badge badge-1"><svg class="badge-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 24/7 TRAINING ACCESS</div>
+      <div class="badge badge-2"><svg class="badge-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"></path><path d="m9 12 2 2 4-4"></path></svg> CERTIFIED COACHES</div>
+      <div class="badge badge-3"><svg class="badge-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect><path d="M9 14h6"></path><path d="M9 18h6"></path><path d="M9 10h6"></path></svg> PERSONAL FITNESS PLANS</div>
+    </div>
+    
+    <div class="scroll-indicator">
+      <div class="mouse"></div>
     </div>
   </header>
 
-
-  <section class="about">
-    <h2>About Fitness First</h2>
-    <p>Fitness First is a leading gym dedicated to helping individuals achieve their health and fitness goals in a supportive, well-equipped environment. We cater to everyone — beginners to professional athletes.</p>
-    <p>Our gym is equipped with the latest machines, certified personal trainers, and diverse group classes to suit all preferences. We’re not just a gym, we’re a community focused on strength, discipline, and self-growth.</p>
+  <section class="stats-section reveal">
+    <div class="stat-card">
+      <h3 class="counter" data-target="500">0</h3>
+      <p>Members</p>
+    </div>
+    <div class="stat-card">
+      <h3 class="counter" data-target="15">0</h3>
+      <p>Expert Coaches</p>
+    </div>
+    <div class="stat-card">
+      <h3 class="counter" data-target="6">0</h3>
+      <p>Training Programs</p>
+    </div>
+    <div class="stat-card">
+      <h3>7 Days</h3>
+      <p>Free Trial</p>
+    </div>
   </section>
 
-
-  <section class="features">
-    <h2>Why Choose Us?</h2>
-    <div class="feature-grid">
-      <div class="feature-item">
+  <section class="why-us reveal" id="why-us">
+    <div class="section-header">
+      <h2>Why Fitness First?</h2>
+      <div class="title-line"></div>
+    </div>
+    <div class="feature-cards">
+      <div class="card">
+        <div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6.5 17.5 11-11"></path><path d="m21 21-1-1"></path><path d="m3 3 1 1"></path><path d="m18 22 4-4"></path><path d="m2 6 4-4"></path><path d="m3 10 7-7"></path><path d="m14 21 7-7"></path></svg></div>
         <h3>Modern Equipment</h3>
         <p>Top-tier machines and tools for every fitness goal.</p>
       </div>
-      <div class="feature-item">
-        <h3>Certified Trainers</h3>
-        <p>Professional experts to guide your fitness journey.</p>
+      <div class="card">
+        <div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><polyline points="16 11 18 13 22 9"></polyline></svg></div>
+        <h3>Expert Coaching</h3>
+        <p>Professional experts to guide your fitness journey safely.</p>
       </div>
-      <div class="feature-item">
-        <h3>Flexible Plans</h3>
+      <div class="card">
+        <div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></div>
+        <h3>Flexible Memberships</h3>
         <p>Memberships designed for all goals and lifestyles.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"></path><path d="M7 2v20"></path><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"></path></svg></div>
+        <h3>Nutrition Support</h3>
+        <p>Fuel your body with meal plans built for your goals.</p>
       </div>
     </div>
   </section>
 
-
-  <section class="contact">
-    <h2>Contact Us</h2>
-    <p><strong>Address:</strong> Fitnessfirst,Galle road,Moratuwa.</p>
-    <p><strong>Phone:</strong> +94 456 7890</p>
-    <p><strong>Email:</strong> support@fitnessfirst.com</p>
-    <p><strong>Hours:</strong> 6:00 AM – 10:00 PM (Every day)</p>
+  <section class="programs-preview reveal">
+    <div class="section-header">
+      <h2>Featured Programs</h2>
+      <div class="title-line"></div>
+    </div>
+    <div class="programs-grid">
+      <div class="program-card" style="background-image: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop');">
+        <div class="program-overlay">
+          <h3>Strength Training</h3>
+          <a href="services.html" class="btn btn-sm">View Details</a>
+        </div>
+      </div>
+      <div class="program-card" style="background-image: url('https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?q=80&w=2070&auto=format&fit=crop');">
+        <div class="program-overlay">
+          <h3>Yoga</h3>
+          <a href="services.html" class="btn btn-sm">View Details</a>
+        </div>
+      </div>
+      <div class="program-card" style="background-image: url('https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=2070&auto=format&fit=crop');">
+        <div class="program-overlay">
+          <h3>Zumba</h3>
+          <a href="services.html" class="btn btn-sm">View Details</a>
+        </div>
+      </div>
+      <div class="program-card" style="background-image: url('https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=2069&auto=format&fit=crop');">
+        <div class="program-overlay">
+          <h3>HIIT</h3>
+          <a href="services.html" class="btn btn-sm">View Details</a>
+        </div>
+      </div>
+      <div class="program-card" style="background-image: url('https://images.unsplash.com/photo-1601422407692-ec4eeec1d9b3?q=80&w=1925&auto=format&fit=crop');">
+        <div class="program-overlay">
+          <h3>CrossFit</h3>
+          <a href="services.html" class="btn btn-sm">View Details</a>
+        </div>
+      </div>
+    </div>
+    <div class="programs-action">
+      <a href="services.html" class="btn btn-outline">See All Classes</a>
+    </div>
   </section>
 
+  <section class="cta-section reveal">
+    <div class="cta-content">
+      <h2>Your next level starts today.</h2>
+      <p>Stop waiting for motivation. Build a routine that makes progress unavoidable.</p>
+      <a href="register.html" class="btn btn-primary btn-large">Become a Member</a>
+    </div>
+  </section>
 
   <footer class="footer">
-    <p>&copy; 2025 Fitness First. All rights reserved.</p>
-    <div class="social-links">
-      <a href="#">Instagram</a>
-      <a href="#">Facebook</a>
-      <a href="#">Twitter</a>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h2>FitnessFirst<span class="dot-lk">.lk</span></h2>
+        <p>Galle road, Moratuwa.</p>
+        <p>+94 456 7890 | support@fitnessfirst.com</p>
+      </div>
+      <div class="social-links">
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Fitness First. All rights reserved.</p>
     </div>
   </footer>
 
+  <a href="#home" class="back-to-top" id="backToTop">↑</a>
+
+  <script src="site.js"></script>
 </body>
 </html>

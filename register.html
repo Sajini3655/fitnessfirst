@@ -1,167 +1,362 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Register - Fitness First</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register | FitnessFirst.lk</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="style.css">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f9f9f9;
+    .auth-section {
+      display: flex;
+      min-height: calc(100vh - 80px);
+      background: var(--bg-dark);
     }
-    .login-section {
+
+    .auth-image {
+      flex: 1;
+      background: linear-gradient(135deg, rgba(20,0,0,0.7) 0%, rgba(20,0,0,0.2) 100%), url('https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=2070&auto=format&fit=crop') center/cover;
+      display: none;
+    }
+
+    .auth-form-container {
+      flex: 1;
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 80vh;
-      background: linear-gradient(to right, #242424, #323232, #3d3d3d);
       padding: 2rem;
     }
-    .login-box {
-      background-color: #fff;
-      padding: 2rem 3rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+    .auth-card {
+      background: var(--bg-card);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 12px;
+      padding: 2.5rem;
       width: 100%;
-      max-width: 400px;
-      text-align: center;
-    }
-    .login-box h2 {
-      margin-bottom: 1.5rem;
-      color: #ff5252;
-    }
-    .login-box input {
-      width: 100%;
-      padding: 10px;
-      margin: 0.75rem 0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    .login-box button {
-      margin-top: 1rem;
-      padding: 0.75rem;
-      width: 100%;
-      background-color: #ff5252;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      font-size: 1rem;
-      cursor: pointer;
+      max-width: 500px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.5);
     }
 
-    .footer {
-      background-color: #111;
+    .auth-card h2 {
+      font-family: var(--font-heading);
+      font-size: 2rem;
       color: #fff;
+      margin-bottom: 0.5rem;
       text-align: center;
-      padding: 2rem 1rem;
     }
 
-    /* Modal */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 999;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.6);
-    }
-    .modal-content {
-      background: #fff;
-      margin: 15% auto;
-      padding: 20px;
-      border-radius: 8px;
+    .auth-card p.subtitle {
       text-align: center;
-      width: 300px;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
     }
-    .modal button {
-      margin-top: 15px;
-      padding: 8px 16px;
-      background: #ff5252;
-      color: white;
+
+    .input-group {
+      margin-bottom: 1.2rem;
+      position: relative;
+    }
+
+    .input-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 0.9rem;
+      background: #111;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      color: #fff;
+      font-family: var(--font-body);
+      transition: var(--transition);
+    }
+
+    .input-group input:focus {
+      outline: none;
+      border-color: var(--accent-red);
+      box-shadow: 0 0 10px rgba(255,51,51,0.2);
+    }
+
+    .toggle-password {
+      position: absolute;
+      right: 15px;
+      top: 38px;
+      background: transparent;
       border: none;
-      border-radius: 5px;
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+
+    .toggle-password:hover {
+      color: #fff;
+    }
+
+    .password-strength {
+      height: 4px;
+      width: 100%;
+      background: rgba(255,255,255,0.1);
+      border-radius: 2px;
+      margin-top: 0.5rem;
+      overflow: hidden;
+      display: none;
+    }
+
+    .strength-bar {
+      height: 100%;
+      width: 0%;
+      transition: all 0.3s ease;
+    }
+
+    .btn-full {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1.1rem;
+      margin-top: 1rem;
+    }
+
+    .auth-links {
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+
+    .auth-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.3s;
+    }
+
+    .auth-links a:hover {
+      color: var(--accent-red);
+    }
+
+    .message-box {
+      display: none;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .message-success {
+      background: rgba(46, 204, 113, 0.2);
+      color: #2ecc71;
+      border: 1px solid #2ecc71;
+    }
+
+    .message-error {
+      background: rgba(231, 76, 60, 0.2);
+      color: #e74c3c;
+      border: 1px solid #e74c3c;
+    }
+
+    .loading-spinner {
+      display: none;
+      width: 20px;
+      height: 20px;
+      border: 3px solid rgba(255,255,255,0.3);
+      border-radius: 50%;
+      border-top-color: #fff;
+      animation: spin 1s ease-in-out infinite;
+      margin: 0 auto;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    @media (min-width: 900px) {
+      .auth-image {
+        display: block;
+      }
     }
   </style>
 </head>
 <body>
-
-  <nav class="navbar">
+  
+  <nav class="navbar" id="navbar">
     <div class="logo">FitnessFirst<span class="dot-lk">.lk</span></div>
-    <ul class="nav-links">
+    
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    
+    <ul class="nav-links" id="nav-links">
       <li><a href="fitness first.html">Home</a></li>
       <li><a href="services.html">Classes</a></li>
       <li><a href="trainers.html">Trainers</a></li>
       <li><a href="pricing.html">Pricing</a></li>
       <li><a href="mealplans.html">Meal Plans</a></li>
-      <li><a href="register.html">Register</a></li>
+      <li><a href="register.html" class="active nav-btn">Register</a></li>
     </ul>
   </nav>
 
-  <section class="login-section">
-    <div class="login-box">
-      <h2>Register</h2>
-      <form id="registerForm">
-        <input type="text" name="full_name" placeholder="Full Name" required />
-        <input type="email" name="email" placeholder="Email Address" required />
-        <input type="text" name="username" placeholder="Username" required />
-        <input type="password" name="password" placeholder="Password" required />
-        <input type="password" name="cpassword" placeholder="Confirm Password" required />
-        <button type="submit">Sign Up</button>
-      </form>
-      <a href="login.html" class="register-link">Already have an account? Login</a>
+  <main class="auth-section">
+    <div class="auth-form-container">
+      <div class="auth-card reveal">
+        <h2>Join Fitness First</h2>
+        <p class="subtitle">Create an account and start your journey</p>
+
+        <div id="statusMessage" class="message-box" role="alert" aria-live="assertive"></div>
+
+        <form id="registerForm">
+          <div class="input-group">
+            <label for="full_name">Full Name</label>
+            <input type="text" id="full_name" name="full_name" placeholder="Enter your full name" required />
+          </div>
+
+          <div class="input-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required />
+          </div>
+
+          <div class="input-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Choose a username" required />
+          </div>
+          
+          <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Create a password" required />
+            <button type="button" class="toggle-password" id="togglePassword" aria-label="Toggle password visibility">Show</button>
+            <div class="password-strength" id="pwdStrengthBox">
+              <div class="strength-bar" id="pwdStrengthBar"></div>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="cpassword">Confirm Password</label>
+            <input type="password" id="cpassword" name="cpassword" placeholder="Confirm your password" required />
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+            <span class="btn-text">Sign Up</span>
+            <div class="loading-spinner"></div>
+          </button>
+        </form>
+
+        <div class="auth-links">
+          <a href="login.html">Already have an account? Login</a>
+        </div>
+      </div>
     </div>
-  </section>
+    <div class="auth-image"></div>
+  </main>
 
-  <div class="modal" id="popup">
-    <div class="modal-content">
-      <p id="popupMessage"></p>
-      <button onclick="handlePopupClose()">OK</button>
-    </div>
-  </div>
-
-  <footer class="footer">
-    <p>&copy; 2025 Fitness First. All rights reserved.</p>
-  </footer>
-
+  <script src="site.js"></script>
   <script>
-    const form = document.getElementById("registerForm");
-    const popup = document.getElementById("popup");
-    const popupMessage = document.getElementById("popupMessage");
+    document.addEventListener("DOMContentLoaded", () => {
+      // Toggle Password Visibility
+      const togglePassword = document.getElementById("togglePassword");
+      const passwordField = document.getElementById("password");
+      const cpasswordField = document.getElementById("cpassword");
 
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      const formData = new FormData(form);
+      togglePassword.addEventListener("click", () => {
+        const type = passwordField.getAttribute("type") === "password" ? "text" : "password";
+        passwordField.setAttribute("type", type);
+        cpasswordField.setAttribute("type", type);
+        togglePassword.textContent = type === "password" ? "Show" : "Hide";
+      });
 
-      fetch("register.php", {
-        method: "POST",
-        body: formData,
-      })
-        .then((res) => res.json())
-        .then((data) => {
-          popupMessage.innerText = data.success ? "Registration successful!" : data.error;
-          popup.style.display = "block";
+      // Password Strength Indicator
+      const pwdStrengthBox = document.getElementById("pwdStrengthBox");
+      const pwdStrengthBar = document.getElementById("pwdStrengthBar");
 
-          popup.setAttribute("data-success", data.success);
-        })
-        .catch((error) => {
-          popupMessage.innerText = "An error occurred!";
-          popup.style.display = "block";
-        });
-    });
+      passwordField.addEventListener("input", function() {
+        const val = this.value;
+        if (val.length > 0) {
+          pwdStrengthBox.style.display = "block";
+        } else {
+          pwdStrengthBox.style.display = "none";
+        }
 
-    function handlePopupClose() {
-      const success = popup.getAttribute("data-success") === "true";
-      popup.style.display = "none";
-      if (success) {
-        window.location.href = "fitness first.html";
-      } else {
-        window.location.reload();
+        let strength = 0;
+        if (val.length > 5) strength += 1;
+        if (val.length > 8) strength += 1;
+        if (/[A-Z]/.test(val)) strength += 1;
+        if (/[0-9]/.test(val)) strength += 1;
+        if (/[^A-Za-z0-9]/.test(val)) strength += 1;
+
+        if (strength <= 1) {
+          pwdStrengthBar.style.width = "20%";
+          pwdStrengthBar.style.background = "#e74c3c";
+        } else if (strength === 2 || strength === 3) {
+          pwdStrengthBar.style.width = "60%";
+          pwdStrengthBar.style.background = "#f1c40f";
+        } else {
+          pwdStrengthBar.style.width = "100%";
+          pwdStrengthBar.style.background = "#2ecc71";
+        }
+      });
+
+      // Form Submission
+      const registerForm = document.getElementById("registerForm");
+      const submitBtn = document.getElementById("submitBtn");
+      const btnText = document.querySelector(".btn-text");
+      const spinner = document.querySelector(".loading-spinner");
+      const statusMessage = document.getElementById("statusMessage");
+
+      function showMessage(msg, isSuccess) {
+        statusMessage.textContent = msg;
+        statusMessage.className = "message-box " + (isSuccess ? "message-success" : "message-error");
+        statusMessage.style.display = "block";
       }
-    }
+
+      registerForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        
+        // Basic validation before submit
+        if (passwordField.value !== cpasswordField.value) {
+          showMessage("Passwords do not match.", false);
+          return;
+        }
+        
+        // UI Loading State
+        btnText.style.display = "none";
+        spinner.style.display = "block";
+        submitBtn.disabled = true;
+        statusMessage.style.display = "none";
+
+        const formData = new FormData(registerForm);
+
+        fetch("register.php", {
+          method: "POST",
+          body: formData
+        })
+        .then(res => res.json())
+        .then(data => {
+          if (data.success) {
+            showMessage("Registration successful! Redirecting...", true);
+            setTimeout(() => {
+              window.location.href = "login.html";
+            }, 1500);
+          } else {
+            showMessage(data.error || "Registration failed.", false);
+            btnText.style.display = "block";
+            spinner.style.display = "none";
+            submitBtn.disabled = false;
+          }
+        })
+        .catch(() => {
+          showMessage("An error occurred connecting to the server.", false);
+          btnText.style.display = "block";
+          spinner.style.display = "none";
+          submitBtn.disabled = false;
+        });
+      });
+    });
   </script>
 </body>
 </html>

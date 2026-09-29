@@ -2,76 +2,133 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Ask from Experts | FitnessFirst.lk</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meet Your Coaches | FitnessFirst.lk</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="trainers.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <nav class="navbar">
+  <nav class="navbar" id="navbar">
     <div class="logo">FitnessFirst<span class="dot-lk">.lk</span></div>
-    <ul class="nav-links">
+    
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    
+    <ul class="nav-links" id="nav-links">
       <li><a href="fitness first.html">Home</a></li>
       <li><a href="services.html">Classes</a></li>
-      <li><a href="trainers.html">Trainers</a></li>
+      <li><a href="trainers.html" class="active">Trainers</a></li>
       <li><a href="pricing.html">Pricing</a></li>
       <li><a href="mealplans.html">Meal Plans</a></li>
-      <li><a href="register.html">Register</a></li>
+      <li><a href="register.html" class="nav-btn">Register</a></li>
     </ul>
   </nav>
 
-  <main>
-    <section class="trainers">
-      <h2 class="experts-heading">Ask from Experts</h2>
-      
-      <div class="trainers-grid">
-        <div class="trainer-profile">
-          <img src="https://th.bing.com/th/id/OIP.xlr4kbT8mMT9yXV7KjnP4AHaHa?r=0&rs=1&pid=ImgDetMain" alt="Joel Thilakarathna" class="trainer-img">
+  <header class="page-hero">
+    <div class="hero-content fade-in-up">
+      <h1>Meet Your Coaches</h1>
+      <p>Expert guidance, personalized plans, and relentless motivation. Chat directly with our elite trainers.</p>
+    </div>
+  </header>
+
+  <main class="trainers-container">
+    <section class="trainers-grid">
+      <!-- Trainer 1 -->
+      <div class="trainer-card reveal">
+        <div class="trainer-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=2070&auto=format&fit=crop" alt="Joel Thilakarathna" class="trainer-img">
+        </div>
+        <div class="trainer-info">
           <h3>Joel Thilakarathna</h3>
-          <p>Professional Fitness Coach</p>
-          <p>Founder of Carnage and FitnessIsland.lk</p>
-          <p>Email: <a href="mailto:getfitwith.joel@gmail.com">getfitwith.joel@gmail.com</a></p>
-          <button class="open-chat-btn" data-trainer="Joel Thilakarathna">Chat</button>
+          <p class="specialty">Professional Fitness Coach</p>
+          <div class="tags">
+            <span class="tag">Strength</span>
+            <span class="tag">Conditioning</span>
+          </div>
+          <p class="experience">Founder of Carnage and FitnessIsland.lk</p>
+          <a href="mailto:getfitwith.joel@gmail.com" class="email-link">getfitwith.joel@gmail.com</a>
+          
+          <button class="btn btn-outline btn-full open-chat-btn" data-trainer="Joel Thilakarathna">Chat With Trainer</button>
+          
           <div class="chat-box">
-            <div class="chat-header">Chat with Trainer</div>
+            <div class="chat-header">
+              Chat with Joel
+              <button class="close-chat">×</button>
+            </div>
             <div class="chat-messages"></div>
             <div class="chat-input">
               <input type="text" placeholder="Type a message..." class="message-input">
-              <button class="send-btn">Send</button>
+              <button class="btn btn-primary send-btn">Send</button>
             </div>
           </div>
         </div>
+      </div>
 
-        <div class="trainer-profile">
-          <img src="https://img.freepik.com/premium-photo/gym-girl_841014-29831.jpg?w=2000" alt="Radeesha de Silva" class="trainer-img">
+      <!-- Trainer 2 -->
+      <div class="trainer-card reveal">
+        <div class="trainer-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?q=80&w=1887&auto=format&fit=crop" alt="Radeesha de Silva" class="trainer-img">
+        </div>
+        <div class="trainer-info">
           <h3>Radeesha de Silva</h3>
-          <p>Professional Fitness Coach (5+ years exp)</p>
-          <p>Coach at PowerWorld.Fitness Club Sri Lanka</p>
-          <p>Email: <a href="mailto:radeeshafit@gmail.com">radeeshafit@gmail.com</a></p>
-          <button class="open-chat-btn" data-trainer="Radeesha de Silva">Chat</button>
+          <p class="specialty">Professional Fitness Coach</p>
+          <div class="tags">
+            <span class="tag">Weight Loss</span>
+            <span class="tag">Mobility</span>
+          </div>
+          <p class="experience">Coach at PowerWorld.Fitness (5+ years exp)</p>
+          <a href="mailto:radeeshafit@gmail.com" class="email-link">radeeshafit@gmail.com</a>
+          
+          <button class="btn btn-outline btn-full open-chat-btn" data-trainer="Radeesha de Silva">Chat With Trainer</button>
+          
           <div class="chat-box">
-            <div class="chat-header">Chat with Trainer</div>
+            <div class="chat-header">
+              Chat with Radeesha
+              <button class="close-chat">×</button>
+            </div>
             <div class="chat-messages"></div>
             <div class="chat-input">
               <input type="text" placeholder="Type a message..." class="message-input">
-              <button class="send-btn">Send</button>
+              <button class="btn btn-primary send-btn">Send</button>
             </div>
           </div>
         </div>
+      </div>
 
-        <div class="trainer-profile">
-          <img src="https://th.bing.com/th/id/OIP.AOICEbrjS4aTDZJf3i0PNQHaLH?r=0&rs=1&pid=ImgDetMain" alt="Dr. Pandula Basnayaka" class="trainer-img">
+      <!-- Trainer 3 -->
+      <div class="trainer-card reveal">
+        <div class="trainer-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?q=80&w=2070&auto=format&fit=crop" alt="Dr. Pandula Basnayaka" class="trainer-img">
+        </div>
+        <div class="trainer-info">
           <h3>Dr. Pandula Basnayaka</h3>
-          <p>Doctor, Nutrition Specialist</p>
-          <p>Professional Body Builder</p>
-          <p>Email: <a href="mailto:drpandula@gmail.com">drpandula@gmail.com</a></p>
-          <button class="open-chat-btn" data-trainer="Dr. Pandula Basnayaka">Chat</button>
+          <p class="specialty">Nutrition Specialist & Body Builder</p>
+          <div class="tags">
+            <span class="tag">Nutrition</span>
+            <span class="tag">Hypertrophy</span>
+          </div>
+          <p class="experience">Medical Doctor & Professional Athlete</p>
+          <a href="mailto:drpandula@gmail.com" class="email-link">drpandula@gmail.com</a>
+          
+          <button class="btn btn-outline btn-full open-chat-btn" data-trainer="Dr. Pandula Basnayaka">Chat With Trainer</button>
+          
           <div class="chat-box">
-            <div class="chat-header">Chat with Trainer</div>
+            <div class="chat-header">
+              Chat with Dr. Pandula
+              <button class="close-chat">×</button>
+            </div>
             <div class="chat-messages"></div>
             <div class="chat-input">
               <input type="text" placeholder="Type a message..." class="message-input">
-              <button class="send-btn">Send</button>
+              <button class="btn btn-primary send-btn">Send</button>
             </div>
           </div>
         </div>
@@ -80,55 +137,69 @@
   </main>
 
   <footer class="footer">
-    <p>&copy; 2025 Fitness First. All rights reserved.</p>
-    <div class="social-links">
-      <a href="#">Instagram</a>
-      <a href="#">Facebook</a>
-      <a href="#">Twitter</a>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h2>FitnessFirst<span class="dot-lk">.lk</span></h2>
+        <p>Galle road, Moratuwa.</p>
+        <p>+94 456 7890 | support@fitnessfirst.com</p>
+      </div>
+      <div class="social-links">
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Fitness First. All rights reserved.</p>
     </div>
   </footer>
 
+  <a href="#" class="back-to-top" id="backToTop">↑</a>
+  <script src="site.js"></script>
   <script>
-  document.querySelectorAll('.open-chat-btn').forEach((btn, index) => {
-  const chatBox = btn.nextElementSibling;
-  const input = chatBox.querySelector('.message-input');
-  const messages = chatBox.querySelector('.chat-messages');
-  const sendBtn = chatBox.querySelector('.send-btn');
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll('.open-chat-btn').forEach((btn) => {
+        const chatBox = btn.nextElementSibling;
+        const input = chatBox.querySelector('.message-input');
+        const messages = chatBox.querySelector('.chat-messages');
+        const sendBtn = chatBox.querySelector('.send-btn');
+        const closeBtn = chatBox.querySelector('.close-chat');
+        const trainerName = btn.getAttribute('data-trainer');
 
+        btn.addEventListener('click', () => {
+          chatBox.classList.toggle('active');
+        });
 
-  const trainerName = btn.getAttribute('data-trainer');
+        closeBtn.addEventListener('click', () => {
+          chatBox.classList.remove('active');
+        });
 
-  btn.addEventListener('click', () => {
-    chatBox.classList.toggle('active');
-  });
-
-  sendBtn.addEventListener('click', () => {
-    const msg = input.value.trim();
-    if (msg) {
-      fetch('chat.php', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: `message=${encodeURIComponent(msg)}&trainer_name=${encodeURIComponent(trainerName)}`
-      })
-      .then(res => res.json())
-      .then(data => {
-        if (data.success) {
-          const msgDiv = document.createElement('div');
-          msgDiv.className = 'user-message';
-          msgDiv.textContent = `${msg} (${data.timestamp})`;
-          messages.appendChild(msgDiv);
-          input.value = '';
-          messages.scrollTop = messages.scrollHeight;
-        } else {
-          alert(data.message);
-        }
-      })
-      .catch(() => alert('Error sending message.'));
-    }
-  });
-});
-
-</script>
-
+        sendBtn.addEventListener('click', () => {
+          const msg = input.value.trim();
+          if (msg) {
+            fetch('chat.php', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+              body: `message=${encodeURIComponent(msg)}&trainer_name=${encodeURIComponent(trainerName)}`
+            })
+            .then(res => res.json())
+            .then(data => {
+              if (data.success) {
+                const msgDiv = document.createElement('div');
+                msgDiv.className = 'user-message';
+                msgDiv.textContent = `${msg} (${data.timestamp || new Date().toLocaleTimeString()})`;
+                messages.appendChild(msgDiv);
+                input.value = '';
+                messages.scrollTop = messages.scrollHeight;
+              } else {
+                alert(data.message || 'Error from server');
+              }
+            })
+            .catch(() => alert('Error sending message. Is the backend running?'));
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
