@@ -272,6 +272,12 @@ body {
   animation: float 6s ease-in-out infinite;
 }
 
+.badge-icon {
+  width: 22px;
+  height: 22px;
+  color: var(--accent-red);
+}
+
 .badge-2 { animation-delay: 2s; }
 .badge-3 { animation-delay: 4s; }
 
@@ -382,6 +388,11 @@ body {
   justify-content: center;
   border-radius: 50%;
   color: var(--accent-red);
+}
+
+.card-icon svg {
+  width: 34px;
+  height: 34px;
 }
 
 .card h3 {
